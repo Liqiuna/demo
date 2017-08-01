@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ly_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp">
+
+        <ImageView
+            android:id="@+id/iv_bulb"
+            android:src="@drawable/bulb_normal"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="有好友在附近"
+            android:textSize="22sp"
+            android:textColor="@android:color/background_dark"
+            android:gravity="bottom" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_driver"
+        android:layout_below="@+id/ly_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dashed_line"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <include
+        android:id="@+id/ly_item_nearby"
+        layout="@layout/item_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_driver" />
+</RelativeLayout>

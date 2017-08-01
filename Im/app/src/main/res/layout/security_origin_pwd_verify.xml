@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="为保障你的数据安全，修改密码前请填写原密码。"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/verify_pwd_tv"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp">
+        <Button
+            android:id="@+id/cancel_verify_btn"
+            android:text="取  消"
+            android:textColor="#25AE90"
+            android:background="#ECEEF1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            />
+        <Button
+            android:id="@+id/verify_pwd_btn"
+            android:text="确定"
+            android:textColor="#25AE90"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ECEEF1"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

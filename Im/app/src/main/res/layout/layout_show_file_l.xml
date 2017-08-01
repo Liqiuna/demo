@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/foreground"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_show_file_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/file64" />
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:id="@+id/tv_show_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_show_file_icon"
+        android:text="123"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_show_file_len"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/iv_show_file_icon"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_show_file_isdownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="已下载"
+        android:textSize="16sp" />
+</RelativeLayout>

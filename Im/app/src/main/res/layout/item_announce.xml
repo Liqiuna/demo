@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+               android:padding="5dp"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ly_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#9393FF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal|center"
+            android:singleLine="true"
+            android:text="公告详情"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/arrow_back"
+            android:drawableStart="@drawable/arrow_back"
+            android:singleLine="true"
+            android:text="群公告"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:background="@drawable/shape_edittext"
+                    android:layout_below="@+id/ly_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="title"
+            android:textSize="25sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_sender"
+            android:layout_below="@+id/tv_title"
+            android:text="sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:text="time"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_sender"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/tv_driver"
+            android:layout_below="@+id/tv_sender"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dashed_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:text="content"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_below="@+id/tv_driver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_delAnnounce"
+        android:visibility="gone"
+        android:background="@drawable/shape_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="删除"
+        android:textSize="18sp"/>
+</RelativeLayout>

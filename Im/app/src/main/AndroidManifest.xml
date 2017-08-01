@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cst14.im">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    //获取手机的imei码
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    //手机短信
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".utils.ImApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.GroupChatActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.SearchResultActivity" />
+        <activity android:name=".activity.ChatActivity" />
+        <activity
+            android:name=".activity.VideoActivity"
+            android:theme="@style/half_transparent" />
+        <activity android:name=".activity.GroupActivity" />
+        <activity android:name=".activity.GroupCreateActivity" />
+        <activity android:name=".activity.GroupInfoActivity" />
+        <activity android:name=".activity.SearchConditionActivity" />
+        <activity android:name=".activity.GroupSearchActivity" />
+        <activity android:name=".activity.ChangePwdActivity" />
+        <activity android:name=".activity.ModHeadImageActivity" />
+        <activity android:name=".activity.GroupAnnounceActivity" />
+        <activity android:name=".activity.AnnounceCreateActivity" />
+        <activity android:name=".activity.AnnounceInfoActivity" />
+        <activity android:name=".activity.GroupMoreFuncActivity" />
+        <activity android:name=".activity.SearchGroupResultActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.GameActivity" />
+        <activity android:name=".activity.NearbyActivity" />
+        <activity android:name=".activity.NearbyTipSettingAty" />
+        <activity android:name=".activity.EditInfoActivity" />
+        <activity android:name=".activity.SetRoleActivity" />
+        <activity android:name=".activity.ManagerPrmsActivity" />
+        <activity android:name=".activity.RgstPermissionActivity" />
+        <activity android:name=".activity.LoginPermissionActivity" />
+        //短信activity声明
+        <activity android:name=".activity.SettingSecurityActivity" />
+        <activity android:name=".activity.FriendMsgActivity" />
+        <activity android:name=".activity.SearchHistoryMsgActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.CuttomAttrActivity" />
+        <activity
+            android:name=".activity.NewFriendActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity android:name=".activity.SecurityChangePwdActivity" />
+        <activity android:name=".activity.SecurityCenterActivity" />
+        <activity android:name=".activity.SecurityFindPwdActivity" />
+        <activity android:name=".activity.LoginPhoneVerifyActivity" />
+        <activity android:name=".activity.SecurityLoginByPhoneActivity" />
+        <activity android:name=".activity.UserRequiredPrmsActivity" />
+        <activity android:name=".activity.GroupLimitPrmsActivity"/>
+        <activity android:name=".activity.ManageModifyUserInfoActivity"/>
+        <activity android:name=".activity.SearchUserDetailsActivity"/>
+    </application>
+
+</manifest>

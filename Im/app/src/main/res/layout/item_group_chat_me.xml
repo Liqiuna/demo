@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dip"
+    android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    android:paddingTop="10dip">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_item_group_chat_me_send_time"
+            android:layout_centerHorizontal="true"
+            android:text="hahaha"
+            android:textSize="6pt"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_group_chat_me_icon"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dip"
+        android:layout_alignTop="@+id/tv_item_group_chat_me_text"
+        android:layout_marginTop="-10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_item_group_chat_me_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/iv_item_group_chat_me_icon"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_group_chat_me_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_group_chat_me_name"
+        android:layout_toLeftOf="@id/iv_item_group_chat_me_icon"
+        android:background="@drawable/qr"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:visibility="visible" />
+
+    <ImageView
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/iv_item_group_chat_me_voice"
+        android:layout_alignTop="@+id/tv_item_group_chat_me_text"
+        android:layout_toLeftOf="@id/iv_item_group_chat_me_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:visibility="visible"
+        />
+    <TextView
+        android:hint="15''"
+        android:id="@+id/tv_item_group_chat_me_voice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tv_item_group_chat_me_text"
+        android:layout_alignTop="@+id/tv_item_group_chat_me_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"
+        />
+    <ProgressBar
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:id="@+id/pb_item_group_chat_me"
+        android:layout_toLeftOf="@id/tv_item_group_chat_me_voice_time"
+        android:layout_alignTop="@+id/tv_item_group_chat_me_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"
+        />
+
+    <com.cst14.im.layoutView.GifView
+        android:id="@+id/gif_item_group_chat_me"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv_item_group_chat_me_name"
+        android:layout_toLeftOf="@id/iv_item_group_chat_me_icon"
+        android:background="@drawable/qr"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:visibility="invisible" />
+</RelativeLayout>

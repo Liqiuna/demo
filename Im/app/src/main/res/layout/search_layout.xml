@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/search_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textSize="17sp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="用户名"
+        android:imeOptions="actionSearch"
+        android:layout_toLeftOf="@+id/commit_name_search"
+        android:background="@android:color/background_light"/>
+    <Button
+        android:id="@+id/commit_name_search"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/windowBackground"
+        android:text="查询"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:id="@+id/exit_input_layout"
+        android:layout_below="@+id/search_name"
+        android:layout_width="fill_parent"
+        android:background="@color/windowBackground"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,464 @@
+﻿syntax = "proto2";
+package com.cst14.im.protobuf;
+option java_outer_classname = "ProtoClass";
+
+enum MsgType {
+    LOGIN = 0;
+    BAN_LOGIN = 1;
+    REGISTER=2;
+    GET_OFFLINE_MSG=3;
+    GET_ATTR=4;//得到用户属性（包括自定义属性）
+    DET_CUSTOMATTR=5;//删除自定义属性（非自定义属性不能删）
+    SAVE_ATTR=6;//保存修改的属性
+    GET_PWD_QUETION = 7;
+    CHANGE_PASSWORD = 8;
+    SELECT_USER_ROLE = 9;
+    MODIFY_ROLE = 10;
+	SET_PWD_QUETION = 11;
+	VERIFY_PWD_QUETION = 12;
+	CHANGE_PASSWORD_BY_QUETIONS = 13;
+    VIEW_HISTOTY_MSG=21;//�.��ʷ��Ϣ
+	GET_FRIEND=22;//获取好友列表
+    	DET_FRIEND=24;//删除好友
+    	Remark_Friend=25;//好友备注
+    	ADD_Friend_GROUP=26;//增加好友分组
+    	DET_Friend_GROUP=27;//删除好友分组
+    	Remark_Friend_GROUP=28;//重命名好友分组
+	ADD_FRIEND_Rquest=29;	//增加好友请求
+	ADD_FRIEND_Response=30;//增加好友，对方回应
+    	SEEK_AROUD = 36;
+    	SEEK_CONDITION = 37;
+    	SEEK_ATTRB = 38;
+    	SEEK_NAME  = 39;
+    	SEEK_GROUP = 41;
+
+	GROUP_CHAT = 53;
+        SEE_GROUP_MSG_READ_STATUS = 54;
+        GET_GROUP_FILE =55;
+	MSG_FEED_BACK = 56;
+	GET_ALL_GROUP_JOINED=57;
+	GET_GROUP_PUBLIC_INFO = 58;
+	GET_GROUP_PERSONAL_INFO=59;
+	GET_GROUP_MSG = 70;
+	CREATE_GROUP = 60;
+	SEARCH_GROUP = 61;
+	JOIN_GROUP = 62;
+	DEL_GROUP=63;
+	EXIT_GROUP=64;
+	DEL_GROUP_MEMBER=65;
+	INVITE_MEMBER_TO_JOIN_GROUP=120;
+	EDIT_GROUP_INFO=121;
+	EDIT_GROUP_NAMECARD=122;
+	SET_GROUP_ADMIN=123;
+	REMOVE_GROUP_ADMIN=124;
+	TRANSFER_GROUP=125;
+
+	SEND_FILE = 71;
+	ASK_FILE = 72;
+	CREATE_ANNOUNCE = 74;
+	EDIT_ANNOUNCE = 75;
+	GET_ANNOUNCE = 76;
+	DEL_ANNOUNCE = 77;
+	IS_HAVE_NEW_ANNOUNCE = 78;
+
+	//-----The operator of Security-----
+	BIND_EMAIL = 80;
+	REMOVE_EMAIL = 81;
+	SET_QUESTION = 82;
+	CANCEL_QUESTION= 83;
+	GET_SECURITY_INFO = 84;
+	BIND_PHONE = 85;
+	CANCEL_PHONE = 86;
+	CHANGE_PWD_BY_ORIGIN_PWD=87;
+	CHANGE_PWD_BY_EMAIL=88;
+	LOGIN_PWD_BY_PHONE=89;
+
+
+	// ---- relative dataType of chat
+	MsgType_SESSION = 93;   // �Ự����
+	MsgType_UPLOAD_FILE = 94;
+
+	UPDATE_LOCATION = 99;
+	GET_NEARBY = 100;
+	GET_NEARBY_BY_PAGE = 101;
+	GET_NEARBY_TIP = 102;
+	GET_FRIEND_MSG = 104;
+	GET_NEARBY_SETTING = 103;
+    UPDATE_NEARBY_SETTING = 106;
+	
+	GET_PERSONAL_MSG_READING_RECORD = 105;
+
+	//----Permissions' message
+	GET_CURRENT_PERMISSION_TYPE = 110;
+	CHECK_RGST_TYPE = 111;
+	SET_RGST_TYPE = 112;
+	CHECK_IF_LOGIN = 113;
+        SET_LOGIN_TYPE = 114;
+        CHECK_USER_REQUIRED = 115;
+	SET_USER_REQUIRED = 116;
+        CHECK_CREATE_GROUP_LIMIT = 117;
+	SET_CREATE_GROUP_LIMIT = 118;
+      
+        GET_ATTR_TYPE=119;
+       //-----管理员修改指定用户信息-----
+        GET_USER_DETAIL=126;//查询用户信息
+        MODIFY_USER_INFOR=127;//修改用户信息
+        
+        
+
+}
+enum StatusCode{
+	SUCCESS = 0;
+	FAILED = 1;
+}
+enum UserRole{
+     SupAdmin=1;//超级管理员
+     Admin=2;   //管理员
+     CustmrSrv=3; // 客服
+     OrdinaryUser=4;//普通用户
+}
+message Msg  {
+  required MsgType msgType = 1;
+  optional string msgUniqueTag = 2;
+  optional StatusCode responseState = 3;
+  optional string account = 4;
+  optional string pwd = 5;
+  optional string token = 6;
+  optional string errMsg = 7;
+  optional User user=8;   //�û�
+  repeated User friends=9;//����
+  repeated FriendList friendLists=10;
+  repeated PersonalMsg OfflineMsg=11;
+  repeated GroupMsg OfflineGroupMsg=12;
+  repeated Group groups = 13;
+  optional SearchInfo srchInfo = 14;
+  repeated User newFriendRequest=15;
+  optional string IMEI=21;
+
+	optional string strkey=30;
+	optional int32 groupID = 31;
+	optional string path = 35;
+	optional string msgTime = 36;
+	optional string groupName = 37;
+	optional FeedBack feedBack = 38;
+        repeated PersonalMsg personMsg=83;
+	optional GroupMsg groupMsg = 41;
+	repeated GroupInfo groupInfo = 43;
+	repeated GroupAnnounce announce = 40;
+    optional int32 msgIndex=44;     //��Ϣ�±�
+    optional int32 friendID=45;     //
+	optional MsgSecurity securityItem = 80;//�ܱ���Ϣ
+	optional PersonalMsg personalMsg = 81; //˽����Ϣ
+	optional MsgForFileUpload fileUploadMsg = 82; //�ϴ��ļ��������Ϣ
+
+	repeated Nearby nearBy = 90;
+	optional Location location = 91;
+	optional PersonalMsgReadingRecord record = 92;
+	optional NearbyCondition nearbyCondition = 93;
+	optional int32 curNearbyPage = 94;
+	optional NearbySetting nearbySetting = 96;
+        optional int32 rgstType = 100;
+	optional bool ifLogin = 101;
+        optional Attrtype attrType=102;
+        optional string userMark=103;//用户名/账号
+        optional bool isUserExists=104;//用户是否存在
+        repeated GroupMsg groupHistoryMsg=105;
+        optional bool isPerMsg=106;
+}
+
+message User{
+	required int32  userID = 1;
+	optional string userPwd = 2;
+	optional string nickName = 3;
+	optional bytes  icon = 4;
+	optional string iconName = 5;
+	optional bool isOnline = 6;
+	optional string  uesrIntro = 7;
+	optional int32  userRoleID = 8;
+	optional string remark = 9; 		//好友备注
+        optional UserDetail userDetail=10;
+        optional string userName =11;
+	optional int32  listNO= 12; //所在分组
+	optional bool  isAgree=13;//好友请求,是否同意
+	optional int32 creGroupLimit=14;
+}
+message Attrtype{
+       
+        optional  bool   nick=1;
+        optional  bool   phone=2;
+        optional   bool realPhoto=3;
+        optional   bool address =4;
+        optional   bool sex    =5;
+        optional   bool age    =6;
+        optional   bool birthday=7;
+        optional   bool mail=8;
+        optional   bool qq=9;  
+        optional   bool wechat=10; 
+         optional   bool idCard =11;   
+         optional   bool creCard=12;
+         optional   bool debtCard =13;
+         optional   bool stuNo =14;
+         
+}
+
+message FriendList{
+	required int32 listNO= 1;//好友分组、组号
+	optional string listName = 2;//好友分组、组名
+}
+
+
+message UserDetail {
+  required int32 uID = 1;
+  optional string phone = 2;
+  optional string address = 3;
+  optional string QQ = 4;
+  optional string wechat = 5;
+  optional string sex = 6;
+  optional int32  age = 7;
+  optional string idCard = 8;
+  optional string mail = 9;
+  optional string creCard = 10;
+  optional string debtCard = 11;
+  optional string stdNo = 12;
+  optional string intro = 13;
+  optional UserCustomAttr customAttr = 14;
+   optional string birthday=15;
+}
+
+message UserCustomAttr {
+   required int32 userID = 1;
+   repeated string attrName = 2;
+   repeated string attrContent = 3;
+}
+
+
+message SearchInfo{
+   required MsgType searchType = 1;
+   optional string srchName = 2;
+   optional string srchAttrb = 3;
+   optional bool onlyOnline = 4;
+   optional int32 ageLow = 5;
+   optional int32 ageHigh = 6;
+   optional bool selectMale = 7;
+   optional bool selectFemale = 8;
+   optional int32 groupNO = 9;
+   optional string address = 10;
+   optional int32 sinceId = 11;
+   optional double lng = 12; //����
+   optional double lat = 13; //γ��
+}
+
+message Group {
+  required int32 groupID = 1;
+  optional string groupName = 2;
+  optional string groupIntro = 3;
+  optional string createTime = 4;
+  optional int32 rank = 5;
+}
+message MsgForFileUpload{
+	repeated string fileFingerPrint = 1;
+	repeated string fileTokenForHttp = 2;
+	repeated bool shouldAvoidUpload = 3;
+}
+
+message PersonalMsg{
+	required int32 senderID = 1;  //������
+	repeated int32 recverID = 2;//������
+	optional string sendTime = 3;//����ʱ��
+	optional string readTime = 4;//�Ķ���
+	optional string content = 5;//����
+	optional DataType msgType = 6;//����
+	optional bool isReaded = 7;//�Ƿ��Ķ�
+	optional string fileName=8;//�ļ���
+	optional string thumbFingerPrint = 13;
+	optional string thumbName = 14;
+	optional string fileLen = 15; //�ļ����ȣ���������/�ļ���С
+	optional string msgId = 16; // ÿһ���ͻ�����Ҫ֪���Լ��ķ���ȥ��Ϣ��id
+        optional int32 recvID=17;
+}
+
+message GroupMemberInfo{
+	optional int32 userID=1;
+	optional string userName=2;
+	optional string namecard=3;
+	optional int32 role=4;
+}
+
+message GroupInfo {
+	optional int32 groupID = 1;
+	optional string groupName = 2;
+	optional int32 ownerID = 3;
+	optional string ownerName = 4;
+	optional string createTime = 5;
+	optional string groupIntro = 6;
+	optional bytes  icon = 7;
+	optional string iconName = 8;
+	optional string mbList = 9;
+	optional int32 mbCount = 10;
+	optional string admin = 11;
+
+	optional string namecard = 12;
+	optional int32 userRole=13;
+	
+	optional GroupMemberInfo myInfo=14;
+	repeated GroupMemberInfo memberList=15;
+}
+
+
+
+message GroupAnnounce {
+  optional int32 groupID = 1;
+  optional int32 announceID = 2;
+  optional string title = 3;
+  optional string sender = 4;
+  optional string sendTime = 5;
+  optional string content = 6;
+}
+
+message GroupMsg {
+  optional int32 groupID = 1;
+  optional string msgID = 3;
+  optional string msgTime = 5;
+  optional DataType dataType = 7;
+  optional string Text = 9;
+  optional string senderName = 11;
+  optional string nick = 12;
+  optional int32 voiceTime = 13;
+  optional FileInfo fileInfo = 14;
+}
+message GroupHistoryMsg {
+  optional int32 groupID = 1;
+  optional int32 sendID=2;
+  optional string msgTime = 3;
+  optional DataType dataType = 4;
+  optional string content = 5;
+  optional string sendName = 6;
+  optional string fileName=7;
+}
+enum MsgStatus {
+	SEND_FAIL = 0;
+	SEND_SUCCESS = 2;
+	READED = 4;
+}
+
+message FeedBack {
+  optional MsgStatus status = 1;
+	optional string userName = 2;
+	optional string msgID = 4;
+	optional string msgTime = 6;
+	optional int32 groupID = 8;
+	optional string reason = 9;
+}
+
+message FileInfo {
+	optional string path = 1;
+	optional string name = 2;
+	optional string ext = 3;
+	optional int32 size = 4;
+  optional bytes fileByte = 7;
+}
+
+enum DataType {
+	TEXT = 0;
+	IMAGE = 1;
+	VIDEO = 2;
+
+	VOICE = 3;
+	FILE = 5;
+	FEED_BACK_SEND_OK = 6;
+	FEED_BACK_RECEIVED = 7;
+	FEED_BACK_ONE_READED = 8;
+}
+
+
+
+
+//-----The info of Security-----
+
+enum EmailStauts{
+		UNBOUND=0;
+		BOUND =1;
+		REUSED=2;
+		UNVERIFIED=3;
+	}
+
+enum QuestionStatus{
+		UNSET = 0;
+		SET = 1;
+	}
+
+message MsgSecurity{
+	optional	MsgEmail emailBind = 1;
+	optional	MsgQuestion questionSet = 2;
+	optional    MsgPhone phoneBind = 3;
+	 optional string pwd=4;
+	}
+
+message MsgEmail{
+	optional	string userEmail = 1;
+	optional	EmailStauts userEmailStatus = 2;
+	optional	string bindTime = 3;
+}
+
+message MsgQuestion{
+	optional  string pswQuetion1 = 1;
+    optional  string pswQuetion2 = 2;
+    optional  string pswQuetion3 = 3;
+    optional  string pswAnswer = 4;
+    optional  int32  pswQuetionNumber = 5;
+}
+
+message MsgPhone{
+	optional string userPhone = 1;
+	optional EmailStauts userPhoneStatus = 2;
+	optional string bindTime=3;
+}
+
+//-----The info of Security-----
+
+message Nearby {
+  optional bytes avatar = 1;
+  optional string name = 2;
+  optional string nick = 3;
+  optional int32 age = 4;
+  optional string sex = 5;
+  optional string intro = 6;
+  optional double distance = 7;
+  optional string updateTime = 9;  
+}
+
+message Location {
+  optional double latitude = 1;
+  optional double longitude = 2;
+}
+
+message PersonalMsgReadingRecord{
+	required string readTime = 1;
+}
+
+message NearbyCondition {
+  optional Sex sex = 1;
+  optional Active active = 4;
+  optional bool isAllAge = 7;
+  optional int32 minAge = 10;
+  optional int32 maxAge = 13;
+}
+
+enum Sex {
+  ALL = 0;
+  MAN = 1;
+  WOMAN = 2;
+}
+
+enum Active {
+  ONE_DAY = 0;
+  THREE_DAYS = 1;
+  FIFTEEN_MINUTES = 2;
+  SIXTY_MINUTES = 3;
+}
+
+message NearbySetting {
+  optional bool isCanBeFind = 1;
+  optional bool isNeedTip = 2;
+  optional double tipDistance = 3;
+}

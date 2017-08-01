@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorGray"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textSize="23dp"
+        android:id="@+id/tv_add_or_remark_name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:id="@+id/tv_message_detail"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+        <EditText
+            android:background="@color/white"
+            android:layout_width="302dp"
+            android:layout_height="40dp"
+            android:hint="请输入名字"
+            android:gravity="center_vertical"
+            android:id="@+id/et_add_or_remark_name"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:background="@color/colorGray"
+            android:layout_below="@+id/et_add_or_remark_name"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textColor="@color/Blue_Eyes"
+            android:text="取消"
+            android:id="@+id/btn_add_or_remark_name_cancle"
+            android:orientation="horizontal" />
+        <Button
+            android:background="@color/colorGray"
+            android:textColor="@color/Blue_Eyes"
+            android:layout_width="151dp"
+            android:layout_height="45dp"
+            android:text="确定"
+            android:id="@+id/btn_add_or_remark_name_ok"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

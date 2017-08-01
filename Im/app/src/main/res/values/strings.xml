@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Im</string>
+    <string name="新增属性">增加属性</string>
+    <string name="提交以上更改">提交更改</string>
+    <string name="保存">保存</string>
+    <string name="请输入">请输入</string>
+    <string name="取消吧">取消</string>
+    <string name="picture">picture</string>
+    <string name="完成">完成</string>
+    <string name="所有图片">所有图片</string>
+    <string name="bird_icon">Flappy Bird</string>
+    <string name="fruits_icon">Fruit Ninja</string>
+
+    <style name="CommonDialog" parent="@android:style/Theme.Dialog">
+
+
+    </style>
+
+    <string name="demo_min_label"></string>
+    <string name="demo_max_label"></string>
+</resources>

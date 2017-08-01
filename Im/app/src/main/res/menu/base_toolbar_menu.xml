@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_group_info"
+        android:orderInCategory="10"
+        android:title="群资料"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_create_group"
+        android:title="创建群"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_join_group"
+        android:title="申请加入"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_invite_member"
+        android:title="添加成员"
+        android:visible="false"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_exit_group"
+        android:title="退出群聊"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_del_group"
+        android:title="解散该群"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_transfer_group"
+        android:title="转让该群"
+        android:visible="false"
+        app:showAsAction="never"/>
+
+</menu>

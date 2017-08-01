@@ -1,0 +1,11 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cst14.im.layoutView.VideoCaptureLayout
+        android:id="@+id/vl_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+    </com.cst14.im.layoutView.VideoCaptureLayout>
+</RelativeLayout>

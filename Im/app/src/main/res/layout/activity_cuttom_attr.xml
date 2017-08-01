@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.cst14.im.activity.CuttomAttrActivity" >
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:background="#00008B"
+android:id="@+id/relativeLayout"
+android:layout_alignParentTop="true">
+
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/新增属性"
+    android:id="@+id/btn_add"
+    android:background="@null"
+    android:textColor="#fff"
+    android:layout_alignParentTop="true"
+    android:layout_toLeftOf="@+id/btn_commit" />
+</RelativeLayout>
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="430dp"
+        android:id="@+id/lv_mod"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayout"
+        android:divider="#00000000"
+        android:dividerHeight="8dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="#3f000000"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_announce"
+                android:src="@drawable/group_announce_blue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="群公告"
+                android:textSize="20sp"
+                android:paddingStart="15dp"
+                android:layout_toRightOf="@+id/iv_announce"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:drawableRight="@drawable/arror_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_driver"
+            android:background="@drawable/dashed_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/layout"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:paddingStart="10dp"
+                        android:layout_below="@+id/tv_driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_title"
+                android:text="title"
+                android:textSize="30sp"
+                android:textColor="@android:color/background_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_sender"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_title"
+                android:text="sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_time"
+                android:text="time"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_sender"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:text="content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_acknowledge"
+                android:background="@android:color/holo_blue_bright"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="30dp"
+                android:text="我知道了"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/group_join_btn"
+        android:layout_centerHorizontal="true"
+        android:background="@color/windowBackground"
+        android:id="@+id/group_detail_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/selectdate_bg">
+                <com.cst14.im.views.CircleImageView
+                    android:id="@+id/group_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_group_normal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"/>
+                <TextView
+                    android:id="@+id/group_nick"
+                    android:layout_toRightOf="@+id/group_icon"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="群昵称"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="群号：88888888"
+                    android:textSize="18sp"
+                    android:id="@+id/group_no"
+                    android:layout_alignLeft="@+id/group_nick"
+                    android:layout_below="@+id/group_nick"
+                    android:layout_marginTop="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/selectdate_bg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/background_dark"
+                    android:layout_marginLeft="20dp"
+                    android:text="创建时间"/>
+                <TextView
+
+                    android:id="@+id/group_create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2016-1-1"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/selectdate_bg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/background_dark"
+                    android:layout_marginLeft="20dp"
+                    android:text="群类型"/>
+                <TextView
+
+                    android:id="@+id/group_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="普通群"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/background_light">
+                <TextView
+                    android:id="@+id/group_intro_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/background_dark"
+                    android:layout_marginLeft="20dp"
+                    android:text="群简介"/>
+                <TextView
+
+                    android:id="@+id/group_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_intro_tip"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="2016-1-1"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/group_join_btn"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="申请加群"
+        android:textSize="18sp"
+        android:background="@drawable/login_btn"
+        android:textColor="@android:color/white"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/group_searching_bar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/group_no_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="不存在该结果"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

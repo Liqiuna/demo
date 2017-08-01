@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:background="@drawable/selectdate_bg"
+    android:paddingBottom="5dp"
+    >
+
+    <com.cst14.im.views.CircleImageView
+        android:id="@+id/user_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/initial_header"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_male"
+
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="false"
+        android:scaleType="fitCenter"
+        android:id="@+id/SexImageView" />
+
+    <LinearLayout
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/user_header"
+        android:layout_toLeftOf="@id/SexImageView"
+        >
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textSize="18sp"
+            android:maxLines="1"
+            />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:maxLines="2"
+            android:text="其他"/>
+        <TextView
+            android:id="@+id/show_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:maxLines="2"
+            android:text="其他"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:id="@+id/new_friend_continer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_list_item_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/new_friend_image_head"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/a6a" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_new_friend_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="好友名字"
+                android:textSize="23sp" />
+            <TextView
+
+                android:id="@+id/tv_new_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_new_friend_item_name"
+                android:layout_marginLeft="5dp"
+                android:text="请求添加为好友"
+                android:textSize="19sp" />
+            <Button
+                android:id="@+id/btn_new_friend_agree"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="同意"
+                android:background="#15b5e9"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/btn_new_friend_disagree"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="拒绝"
+                android:background="#15b5e9"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="61dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:id="@+id/tv_is_agree_in_ragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已同意"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

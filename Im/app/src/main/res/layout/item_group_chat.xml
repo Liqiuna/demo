@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dip"
+    android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    android:paddingTop="10dip">
+<!--
+    <RelativeLayout
+        android:id="@+id/rl_item_group_chat_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_item_group_chat_me_image"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_item_group_chat_me_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_toLeftOf="@id/iv_item_group_chat_me_image"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_item_group_chat_me_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_group_chat_me_name"
+            android:layout_toLeftOf="@id/iv_item_group_chat_me_image"
+            android:background="@drawable/qr"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:visibility="invisible" />
+
+        <com.cst14.im.layoutView.GifView
+            android:id="@+id/gif_chat_me"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tv_item_group_chat_me_name"
+            android:layout_toLeftOf="@id/iv_item_group_chat_me_image"
+            android:background="@drawable/qr"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_group_chat_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_item_group_chat_other_image"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/tv_item_group_chat_other_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_item_group_chat_other_image"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_item_group_chat_other_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_group_chat_other_name"
+            android:layout_toRightOf="@id/iv_item_group_chat_other_image"
+            android:background="@drawable/ql"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:visibility="invisible" />
+
+        <com.cst14.im.layoutView.GifView
+            android:id="@+id/gif_chat_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_group_chat_other_name"
+            android:layout_toRightOf="@id/iv_item_group_chat_other_image"
+            android:paddingTop="13dip"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+   -->
+</RelativeLayout>

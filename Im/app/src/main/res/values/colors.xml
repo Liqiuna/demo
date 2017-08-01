@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGray">#33A9B7B7</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="windowBackground">#f2f2f2</color>
+    <color name="menu_item_collor">#c5c9c8</color>
+    <color name="pop_color">#D9D9D9</color>
+    <color name="foreground">#FFFFFF</color>
+    <color name="light_gray">#33A9B7B7</color>
+    <color name="gray">#40000000</color>
+    <color name="chat_menu_press">#33000000</color>
+    <color name="background">#DFDFDF</color>
+    <color name="light_gray_plus">#50A9B7B7</color>
+    <color name="light_blue">#553CB5FF</color>
+    <color name="light_red">#55FF0000</color>
+    <color name="black">#000000</color>
+    <color name="green">#78DF33</color>
+    <color name="title_gray">#292828</color>
+
+    <color name="Blue_Eyes">#1569C7</color>
+    <color name="Gray_Wolf">#504A4B</color>
+    <color name="Black_Cat">#413839</color>
+    <color name="Red_Fox">#C35817</color>
+    <color name="Cherry_Red">#C24641</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="record">#175b16</color>
+    <color name="black1">#7A7E83</color>
+    <color name="game_bg">#bfd6ed</color>
+
+    <color name="pink">#FFB6C1</color>
+    <color name="blue">#6A6AFF</color>
+    <color name="defcolor">#a9b7b7</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black">#7f000000</color>
+    <color name="bg_blue">#5ea8ed</color>
+    <color name="text_black">#353535</color>
+    <color name="text_light_black">#a6a4a4</color>
+</resources>

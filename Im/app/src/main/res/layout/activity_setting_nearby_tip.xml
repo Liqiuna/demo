@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+
+    <RelativeLayout
+        android:id="@+id/ly_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#9393FF">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal|center"
+            android:singleLine="true"
+            android:text="附近人设置"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_transparent_selector"
+            android:drawableLeft="@drawable/arrow_back"
+            android:drawableStart="@drawable/arrow_back"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:background="@drawable/button_transparent_selector"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_1"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可以被查找"
+            android:textSize="22sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="20dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:id="@+id/swh_canFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track_selector"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="20dp"/>
+    </LinearLayout>
+
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:id="@+id/ly_2"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附近好友提醒"
+            android:textSize="22sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="20dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:id="@+id/swh_needTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track_selector"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ly_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:text="提醒距离(单位m):"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:text="(最大值2000, 默认2000)"
+            android:layout_below="@+id/tv1"
+            android:textSize="10dp"
+            android:layout_marginLeft="0dp" />
+
+        <EditText
+            android:visibility="visible"
+            android:id="@+id/et_tipDistance"
+            android:background="@drawable/edittext_rectangle_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:hint="(最大值2000, 默认2000)"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/tv1" />
+    </RelativeLayout>
+
+
+</LinearLayout>

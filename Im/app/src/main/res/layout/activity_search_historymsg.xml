@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et_msgKeyWord"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textSize="17sp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="搜索历史消息"
+        android:imeOptions="actionSearch"
+        android:layout_toLeftOf="@+id/commit_name_search"
+        android:background="@color/colorGray"
+        />
+    <Button
+        android:id="@+id/btn_commit_msgKeyWord"
+        android:enabled="false"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sure_bg_selector"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+ <ListView
+     android:id="@+id/msgListView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_below="@+id/et_msgKeyWord"
+     android:background="@color/white"
+    >
+ </ListView>
+    <TextView
+        android:id="@+id/tv_tip_noResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="无结果"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_below="@+id/et_msgKeyWord"
+        android:visibility="invisible"/>
+</RelativeLayout>

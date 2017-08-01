@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.cst14.im"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile name:'SMSSDK-2.1.1',ext:'aar'
+    compile name:'SMSSDKGUI-2.1.1',ext:'aar'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.yolanda.nohttp:nohttp:1.0.4'
+    compile files('libs/protobuf-java-3.0.0-beta-3.jar')
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0'
+}

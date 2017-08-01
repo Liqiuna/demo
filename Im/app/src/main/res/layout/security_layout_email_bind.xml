@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入要绑定的邮箱地址"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+
+        />
+    <EditText
+        android:id="@+id/email_bind_et"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
+        android:hint="邮箱"
+        android:imeOptions="actionSearch"
+        android:background="@android:color/background_light"
+        android:inputType="textEmailAddress"
+        android:ems="25"/>
+    <Button
+        android:id="@+id/email_bind_bn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="290dp"
+        android:background="@color/green"
+        android:text="绑定"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/exit_ebind_layout"
+        android:layout_below="@+id/email_bind_et"
+        android:layout_width="fill_parent"
+        android:background="@color/windowBackground"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ll_chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="#262525">
+
+        <Button
+            android:id="@+id/btn_group_chat_back"
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_group_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:text="jdfksj"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_group_caht_search"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/imgbtn_group_chat_annu"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_action_search"
+            />
+
+        <Button
+            android:id="@+id/imgbtn_group_chat_annu"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_search_group"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_caht_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/gv_group_chat_function"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/imgbtn_group_chat_voice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/voice64" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="7dip"
+            android:layout_toLeftOf="@+id/imgbtn_group_chat_face"
+            android:layout_toRightOf="@+id/imgbtn_group_chat_voice"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_group_caht_input"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_gravity="center" />
+
+            <com.cst14.im.layoutView.RecordButton
+                android:id="@+id/btn_group_caht_voice"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_gravity="center"
+                android:text="按住说话"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/imgbtn_group_chat_face"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:layout_marginRight="2dip"
+            android:layout_toLeftOf="@+id/btn_group_chat_sendMsg"
+            android:src="@drawable/smile64" />
+
+        <Button
+            android:id="@+id/btn_group_chat_sendMsg"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/add64"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_chat_title"
+        android:layout_above="@id/ll_caht_linear">
+
+    <ListView
+        android:id="@+id/lv_group_caht_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#aaaaaa"
+        android:dividerHeight="0px"
+        android:fadingEdge="none"
+        android:visibility="visible"/>
+
+    </com.baoyz.widget.PullRefreshLayout>
+    <GridView
+        android:id="@+id/gv_group_chat_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:numColumns="4"
+        android:visibility="visible"/>
+
+</RelativeLayout>

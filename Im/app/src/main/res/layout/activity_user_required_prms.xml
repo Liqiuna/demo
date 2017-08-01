@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cst14.im.activity.UserRequiredPrmsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="设置用户必填属性"
+        android:id="@+id/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_nick"
+            android:onClick="userRequired_nick"
+            android:layout_marginTop="40dp"
+            android:checked="false"
+            android:text="用户昵称"
+            android:paddingRight="30px"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_phone"
+            android:onClick="userRequired_phone"
+            android:layout_marginTop="10dp"
+            android:text="电话号码"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_address"
+            android:onClick="userRequired_address"
+            android:layout_marginTop="10dp"
+            android:text="住址"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_sex"
+            android:onClick="userRequired_sex"
+            android:layout_marginTop="10dp"
+            android:text="性别"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_age"
+            android:onClick="userRequired_age"
+            android:layout_marginTop="10dp"
+            android:text="年龄"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_birthday"
+            android:onClick="userRequired_birthday"
+            android:layout_marginTop="10dp"
+            android:text="生日"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_mail"
+            android:onClick="userRequired_mail"
+            android:layout_marginTop="10dp"
+            android:text="点子邮箱"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_qq"
+            android:onClick="userRequired_qq"
+            android:layout_marginTop="10dp"
+            android:text="QQ"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_weChat"
+            android:onClick="userRequired_weChat"
+            android:layout_marginTop="10dp"
+            android:text="微信"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_idCard"
+            android:onClick="userRequired_idCard"
+            android:layout_marginTop="10dp"
+            android:text="身份证 "
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_creCard"
+            android:onClick="userRequired_creCard"
+            android:layout_marginTop="10dp"
+            android:text="信用卡"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_debtCard"
+            android:onClick="userRequired_debtCard"
+            android:layout_marginTop="10dp"
+            android:text="借记卡"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_stuNum"
+            android:onClick="userRequired_stuNum"
+            android:layout_marginTop="10dp"
+            android:text="学号"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_realPhoto"
+            android:onClick="userRequired_realPhoto"
+            android:layout_marginTop="10dp"
+            android:text="真实照片"
+            android:paddingRight="30px"
+            android:checked="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRequired_yes"
+            android:onClick="userRequired_yes"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="确     定"
+            android:background="@drawable/login_btn_selector"/>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

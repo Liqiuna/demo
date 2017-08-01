@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textSize="17sp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="输入用户名/账号"
+        android:imeOptions="actionSearch"
+        android:layout_toLeftOf="@+id/commit_name_search"
+        android:background="@color/colorGray"
+        />
+    <Button
+        android:id="@+id/btn_search"
+        android:enabled="false"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sure_bg_selector"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tv_tipMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="用户不存在，请确认输入的用户名/账号是否正确"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:textSize="15dp"
+        android:layout_below="@+id/et_msgKeyWord"
+        android:visibility="invisible"/>
+</RelativeLayout>

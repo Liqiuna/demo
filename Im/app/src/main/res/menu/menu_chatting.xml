@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+    <item  android:id="@+id/menu_search_historyMsg"
+           android:icon="@drawable/ic_action_search"
+           android:title="search_msg"
+          yourapp:showAsAction="ifRoom"/>
+    <item android:id="@+id/menu_friend_msg"
+          android:icon="@drawable/user_chat32"
+          android:title="friend_msg"
+          yourapp:showAsAction="ifRoom"/>  
+</menu>  

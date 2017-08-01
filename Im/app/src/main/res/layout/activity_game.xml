@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cst14.im.activity.WebViewActivity"
+    android:background="@color/game_bg">
+    <LinearLayout
+        android:id="@+id/view_game"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:paddingTop="4dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/view_flappy_bird"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="90.0dip"
+                android:layout_height="90.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/bird" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="@string/bird_icon"
+                android:textColor="@color/black1" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/view_fruit_ninja"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="90.0dip"
+                android:layout_height="90.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/fruits" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="@string/fruits_icon"
+                android:textColor="@color/black1" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
